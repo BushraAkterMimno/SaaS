@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaS Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans transition-colors duration-300">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-indigo-600">MySaaS</h1>
+      <nav class="space-x-6 hidden md:block">
+        <a href="index.html" class="hover:text-indigo-600">Home</a>
+        <a href="about.html" class="hover:text-indigo-600">About</a>
+        <a href="blog.html" class="hover:text-indigo-600">Blog</a>
+        <a href="dashboard.html" class="hover:text-indigo-600">Dashboard</a>
+      <button id="modeToggle" class="ml-4 bg-indigo-600 text-white px-3 py-1 rounded">🌙</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
+    <h2 class="text-4xl md:text-6xl font-bold">Grow your business with <span id="typed"></span></h2>
+    <p class="mt-4 text-lg">The ultimate SaaS solution for modern startups</p>
+    <a href="#pricing" class="mt-6 inline-block bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gray-100 transition">Get Started</a>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="max-w-6xl mx-auto py-20 px-6 text-center">
+    <h3 class="text-3xl font-bold mb-10 text-indigo-600">Features</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white shadow-lg rounded-xl p-6 hover:scale-105 transition">
+        <h4 class="font-semibold text-lg">🚀 Fast Performance</h4>
+        <p class="mt-2 text-gray-600">Lightning fast and optimized for speed.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-xl p-6 hover:scale-105 transition">
+        <h4 class="font-semibold text-lg">🔒 Secure Platform</h4>
+        <p class="mt-2 text-gray-600">Built with top-notch security in mind.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-xl p-6 hover:scale-105 transition">
+        <h4 class="font-semibold text-lg">⚡ Easy Integration</h4>
+        <p class="mt-2 text-gray-600">Connect with your favorite tools seamlessly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="bg-gray-100 py-20 text-center">
+    <h3 class="text-3xl font-bold mb-10 text-indigo-600">Pricing</h3>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 px-6">
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:scale-105 transition">
+        <h4 class="font-semibold text-xl">Basic</h4>
+        <p class="text-4xl font-bold mt-4">$19<span class="text-lg">/mo</span></p>
+        <ul class="mt-4 text-gray-600">
+          <li>✔ 5 Projects</li>
+          <li>✔ Email Support</li>
+          <li>✔ Basic Analytics</li>
+        </ul>
+        <button class="mt-6 bg-indigo-600 text-white px-6 py-2 rounded">Choose</button>
+      </div>
+      <div class="bg-indigo-600 text-white p-8 rounded-xl shadow-lg hover:scale-105 transition">
+        <h4 class="font-semibold text-xl">Pro</h4>
+        <p class="text-4xl font-bold mt-4">$49<span class="text-lg">/mo</span></p>
+        <ul class="mt-4">
+          <li>✔ Unlimited Projects</li>
+          <li>✔ Priority Support</li>
+          <li>✔ Advanced Analytics</li>
+        </ul>
+        <button class="mt-6 bg-white text-indigo-600 px-6 py-2 rounded">Choose</button>
+      </div>
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:scale-105 transition">
+        <h4 class="font-semibold text-xl">Enterprise</h4>
+        <p class="text-4xl font-bold mt-4">$99<span class="text-lg">/mo</span></p>
+        <ul class="mt-4 text-gray-600">
+          <li>✔ Custom Solutions</li>
+          <li>✔ 24/7 Support</li>
+          <li>✔ Dedicated Manager</li>
+        </ul>
+        <button class="mt-6 bg-indigo-600 text-white px-6 py-2 rounded">Choose</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="max-w-6xl mx-auto py-20 px-6 text-center">
+    <h3 class="text-3xl font-bold mb-10 text-indigo-600">What Our Clients Say</h3>
+    <div class="testimonial-slider">
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <p>"Amazing product! It boosted our productivity by 200%!"</p>
+        <h4 class="mt-2 font-semibold">– Sarah, CEO</h4>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <p>"User-friendly and super fast. Highly recommend!"</p>
+        <h4 class="mt-2 font-semibold">– John, Startup Founder</h4>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <p>"The best SaaS tool we've ever used. Fantastic support too!"</p>
+        <h4 class="mt-2 font-semibold">– Emma, Project Manager</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-100 py-20 text-center">
+    <h3 class="text-3xl font-bold mb-6 text-indigo-600">Contact Us</h3>
+    <form id="contactForm" class="max-w-lg mx-auto bg-white p-6 rounded-xl shadow-lg">
+      <input type="text" placeholder="Name" class="w-full border rounded px-4 py-2 mb-4" required>
+      <input type="email" placeholder="Email" class="w-full border rounded px-4 py-2 mb-4" required>
+      <textarea placeholder="Message" class="w-full border rounded px-4 py-2 mb-4" required></textarea>
+      <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded">Send</button>
+    </form>
+    <p id="successMsg" class="hidden mt-4 text-green-600 font-semibold">✅ Message Sent Successfully!</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6 text-center text-sm text-gray-600">
+    © 2025 MySaaS. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Typed.js Hero Animation
+    var typed = new Typed('#typed', {
+      strings: ["AI", "Automation", "Analytics"],
+      typeSpeed: 80,
+      backSpeed: 50,
+      loop: true
+    });
+
+    // Testimonials Slider
+    $(document).ready(function(){
+      $('.testimonial-slider').slick({
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 3000
+      });
+    });
+
+    // Contact Form
+    $("#contactForm").submit(function(e){
+      e.preventDefault();
+      $("#successMsg").removeClass("hidden");
+      setTimeout(()=> { $("#successMsg").addClass("hidden"); }, 3000);
+      $(this).trigger("reset");
+    });
+
+    // Dark/Light Mode
+    const body = document.body;
+    const modeBtn = document.getElementById("modeToggle");
+    modeBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      if(body.classList.contains("dark")){
+        body.classList.replace("bg-gray-50","bg-gray-900");
+        body.classList.replace("text-gray-800","text-white");
+        modeBtn.textContent = "☀️";
+      } else {
+        body.classList.replace("bg-gray-900","bg-gray-50");
+        body.classList.replace("text-white","text-gray-800");
+        modeBtn.textContent = "🌙";
+      }
+    });
+  </script>
+
+</body>
+</html>
